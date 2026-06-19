@@ -2,7 +2,7 @@ package com.college.resource.controller;
 
 import com.college.resource.dto.LoginRequest;
 import com.college.resource.dto.LoginResponse;
-import com.college.resource.dto.RegisterRequest;
+import com.college.resource.dto.RegisterRequest; 
 import com.college.resource.entity.User;
 import com.college.resource.security.JwtUtil;
 import com.college.resource.service.UserService;
