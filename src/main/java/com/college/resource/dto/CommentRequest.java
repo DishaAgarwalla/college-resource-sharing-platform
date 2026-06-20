@@ -2,7 +2,7 @@ package com.college.resource.dto;
  
 public class CommentRequest {
 
-    private Long resourceId;
+    private Long resourceId; 
     private Long userId;
     private String content;
 
