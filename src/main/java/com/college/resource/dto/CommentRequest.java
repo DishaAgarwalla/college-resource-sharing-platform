@@ -1,5 +1,5 @@
 package com.college.resource.dto; 
-
+ 
 public class CommentRequest {
 
     private Long resourceId;
