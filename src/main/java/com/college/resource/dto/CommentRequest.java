@@ -5,7 +5,7 @@ public class CommentRequest {
     private Long resourceId; 
     private Long userId;
     private String content;
-
+ 
     public CommentRequest() {
     }
 
