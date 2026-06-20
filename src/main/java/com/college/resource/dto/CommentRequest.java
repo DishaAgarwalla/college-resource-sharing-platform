@@ -1,4 +1,4 @@
-package com.college.resource.dto;
+package com.college.resource.dto; 
 
 public class CommentRequest {
 
