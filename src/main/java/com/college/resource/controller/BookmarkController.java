@@ -1,4 +1,4 @@
-package com.college.resource.controller;
+package com.college.resource.controller; 
 
 import com.college.resource.entity.Bookmark;
 import com.college.resource.service.BookmarkService;
