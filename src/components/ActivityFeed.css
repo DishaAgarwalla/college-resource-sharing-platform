@@ -1,0 +1,196 @@
+.activity-feed {
+  background: var(--bg-card);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+  padding: 1.25rem;
+  box-shadow: var(--shadow);
+  animation: fadeInUp 0.5s ease;
+}
+
+.activity-feed-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.activity-feed-header h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.activity-count {
+  font-size: 0.7rem;
+  color: var(--text-secondary);
+  background: var(--bg-secondary);
+  padding: 0.2rem 0.6rem;
+  border-radius: 9999px;
+}
+
+.activity-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-height: 350px;
+  overflow-y: auto;
+}
+
+.activity-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.6rem 0.75rem;
+  border-radius: var(--radius);
+  transition: all 0.2s ease;
+}
+
+.activity-item:hover {
+  background: var(--bg-hover);
+}
+
+.activity-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 1rem;
+}
+
+.activity-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.activity-message {
+  display: flex;
+  align-items: baseline;
+  gap: 0.3rem;
+  flex-wrap: wrap;
+  font-size: 0.85rem;
+  color: var(--text-primary);
+  line-height: 1.4;
+}
+
+.activity-action {
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.activity-title {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.activity-time {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  margin-top: 0.1rem;
+}
+
+.activity-link {
+  font-size: 0.75rem;
+  color: var(--primary-500);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.2rem 0.5rem;
+  border-radius: 6px;
+  transition: all 0.2s;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.activity-link:hover {
+  background: var(--primary-50);
+  color: var(--primary-600);
+}
+
+.activity-feed-empty {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: var(--bg-card);
+  border-radius: var(--radius-md);
+  border: 1px dashed var(--border-color);
+}
+
+.activity-feed-empty .empty-icon {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.activity-feed-empty p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.activity-load-more {
+  margin-top: 0.75rem;
+  width: 100%;
+  padding: 0.4rem;
+  font-size: 0.8rem;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Dark Mode */
+[data-theme="dark"] .activity-item:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+[data-theme="dark"] .activity-link:hover {
+  background: rgba(99, 102, 241, 0.15);
+}
+
+/* Scrollbar */
+.activity-timeline::-webkit-scrollbar {
+  width: 4px;
+}
+
+.activity-timeline::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+  border-radius: 4px;
+}
+
+.activity-timeline::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 4px;
+}
+
+.activity-timeline::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
+
+@media (max-width: 640px) {
+  .activity-feed {
+    padding: 1rem;
+  }
+  
+  .activity-item {
+    padding: 0.5rem;
+    flex-wrap: wrap;
+  }
+  
+  .activity-link {
+    font-size: 0.7rem;
+    padding: 0.15rem 0.4rem;
+  }
+  
+  .activity-message {
+    font-size: 0.8rem;
+  }
+}

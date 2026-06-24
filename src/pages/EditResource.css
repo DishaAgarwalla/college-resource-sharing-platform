@@ -1,0 +1,31 @@
+.edit-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.edit-form {
+  background: white;
+  padding: 2rem;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow);
+}
+
+.edit-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.edit-actions .btn {
+  flex: 1;
+}
+
+@media (max-width: 640px) {
+  .edit-form {
+    padding: 1.25rem;
+  }
+
+  .edit-actions {
+    flex-direction: column;
+  }
+}

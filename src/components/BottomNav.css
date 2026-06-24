@@ -1,0 +1,116 @@
+.bottom-nav {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 998;
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border-color);
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.08);
+  padding: 0.25rem 0;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+[data-theme="dark"] .bottom-nav {
+  background: rgba(15, 23, 42, 0.95);
+  border-top-color: var(--border-color);
+}
+
+.bottom-nav-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0.25rem 0.5rem;
+}
+
+.bottom-nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.15rem;
+  padding: 0.4rem 0.6rem;
+  text-decoration: none;
+  color: var(--text-secondary);
+  border-radius: 12px;
+  transition: all 0.2s ease;
+  position: relative;
+  flex: 1;
+  max-width: 70px;
+}
+
+.bottom-nav-item:active {
+  transform: scale(0.92);
+}
+
+.bottom-nav-item.active {
+  color: var(--primary-500);
+}
+
+.bottom-nav-item .bottom-nav-icon {
+  font-size: 1.4rem;
+  transition: transform 0.2s ease;
+}
+
+.bottom-nav-item:hover .bottom-nav-icon {
+  transform: translateY(-2px) scale(1.05);
+}
+
+.bottom-nav-item .bottom-nav-label {
+  font-size: 0.6rem;
+  font-weight: 500;
+  letter-spacing: 0.025em;
+  text-align: center;
+}
+
+.bottom-nav-indicator {
+  position: absolute;
+  top: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary-500), var(--secondary-500));
+  border-radius: 0 0 3px 3px;
+}
+
+.admin-item .bottom-nav-icon {
+  filter: drop-shadow(0 0 4px rgba(124, 58, 237, 0.3));
+}
+
+.admin-indicator {
+  background: linear-gradient(90deg, #7c3aed, #a855f7);
+}
+
+/* Show only on mobile */
+@media (max-width: 768px) {
+  .bottom-nav {
+    display: block;
+  }
+  
+  .page-wrapper {
+    padding-bottom: 70px;
+  }
+}
+
+@media (max-width: 480px) {
+  .bottom-nav {
+    padding: 0.15rem 0;
+  }
+  
+  .bottom-nav-item {
+    padding: 0.3rem 0.4rem;
+    max-width: 60px;
+  }
+  
+  .bottom-nav-item .bottom-nav-icon {
+    font-size: 1.2rem;
+  }
+  
+  .bottom-nav-item .bottom-nav-label {
+    font-size: 0.5rem;
+  }
+}

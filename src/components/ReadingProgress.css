@@ -1,0 +1,81 @@
+.reading-progress-container {
+  position: fixed;
+  top: var(--navbar-height);
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: transparent;
+  z-index: 997;
+}
+
+.reading-progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary-500), var(--secondary-500));
+  transition: width 0.1s linear;
+  border-radius: 0 3px 3px 0;
+  box-shadow: 0 0 10px rgba(99, 102, 241, 0.3);
+}
+
+.reading-progress-indicator {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  background: var(--bg-card);
+  padding: 0.5rem;
+  border-radius: 50%;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border-color);
+  z-index: 997;
+  width: 48px;
+  height: 48px;
+  justify-content: center;
+  transition: all 0.3s ease;
+  animation: fadeInUp 0.5s ease;
+}
+
+.reading-progress-indicator:hover {
+  transform: scale(1.05);
+}
+
+.progress-text {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1;
+}
+
+.progress-emoji {
+  font-size: 0.8rem;
+  line-height: 1;
+}
+
+@media (max-width: 768px) {
+  .reading-progress-container {
+    top: var(--navbar-height-mobile);
+  }
+  
+  .reading-progress-indicator {
+    bottom: 90px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+  }
+  
+  .progress-text {
+    font-size: 0.6rem;
+  }
+  
+  .progress-emoji {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .reading-progress-indicator {
+    display: none;
+  }
+}

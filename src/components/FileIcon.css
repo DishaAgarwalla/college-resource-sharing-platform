@@ -1,0 +1,75 @@
+.file-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-sm);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  overflow: hidden;
+}
+
+.file-icon-emoji {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.file-icon-extension {
+  position: absolute;
+  bottom: 2px;
+  right: 4px;
+  font-size: 0.5rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  background: var(--bg-secondary);
+  padding: 0 4px;
+  border-radius: 2px;
+  opacity: 0.8;
+}
+
+/* Sizes */
+.file-icon-small {
+  width: 40px;
+  height: 40px;
+}
+
+.file-icon-small .file-icon-emoji {
+  font-size: 1.2rem;
+}
+
+.file-icon-small .file-icon-extension {
+  font-size: 0.4rem;
+  bottom: 1px;
+  right: 2px;
+  padding: 0 3px;
+}
+
+.file-icon-medium {
+  width: 56px;
+  height: 56px;
+}
+
+.file-icon-medium .file-icon-emoji {
+  font-size: 1.8rem;
+}
+
+.file-icon-large {
+  width: 72px;
+  height: 72px;
+}
+
+.file-icon-large .file-icon-emoji {
+  font-size: 2.5rem;
+}
+
+/* Dark Mode */
+[data-theme="dark"] .file-icon {
+  background: #1e293b;
+  border-color: #334155;
+}
+
+[data-theme="dark"] .file-icon-extension {
+  background: #1e293b;
+  color: #64748b;
+}

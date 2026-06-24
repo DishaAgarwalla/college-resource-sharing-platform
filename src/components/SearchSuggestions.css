@@ -1,0 +1,123 @@
+.search-suggestions {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+  max-height: 300px;
+  overflow-y: auto;
+  z-index: 1000;
+  padding: 0.25rem 0;
+  animation: slideDown 0.2s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.suggestions-section {
+  padding: 0.25rem 0;
+}
+
+.suggestions-section:not(:last-child) {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.suggestions-section-title {
+  padding: 0.4rem 0.75rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.suggestion-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  font-size: 0.85rem;
+  color: var(--text-primary);
+}
+
+.suggestion-item:hover,
+.suggestion-item.selected {
+  background: var(--bg-hover);
+}
+
+.suggestion-item .suggestion-icon {
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+.suggestion-item .suggestion-text {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.suggestion-item .suggestion-match {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.suggestion-item .suggestion-match strong {
+  color: var(--primary-500);
+  font-weight: 600;
+}
+
+.suggestion-item .suggestion-remove {
+  color: var(--text-muted);
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0 0.25rem;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.suggestion-item:hover .suggestion-remove {
+  opacity: 1;
+}
+
+.suggestion-item .suggestion-remove:hover {
+  color: var(--danger);
+}
+
+/* Scrollbar */
+.search-suggestions::-webkit-scrollbar {
+  width: 4px;
+}
+
+.search-suggestions::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+.search-suggestions::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 4px;
+}
+
+/* Dark Mode */
+[data-theme="dark"] .search-suggestions {
+  background: #1e293b;
+  border-color: #334155;
+}
+
+[data-theme="dark"] .suggestion-item:hover,
+[data-theme="dark"] .suggestion-item.selected {
+  background: rgba(255, 255, 255, 0.05);
+}
