@@ -177,8 +177,6 @@ http://localhost:5173
 
 ---
 
----
-
 ## Author
 
 **Disha Agarwalla**
