@@ -1,16 +1,242 @@
-# React + Vite
+# College Resource Sharing Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-stack web application that enables students and faculty to upload, share, manage, and access academic resources efficiently within a college environment.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
 
-## React Compiler
+### Authentication & Authorization
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* User Registration
+* User Login
+* JWT Authentication
+* Role-Based Access Control (User/Admin)
+* Protected Routes
+* Logout Functionality
 
-## Expanding the ESLint configuration
+### User Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* Upload Study Resources
+* Download Resources
+* Search Resources
+* Filter Resources by Subject
+* Sort Resources by Downloads and Ratings
+* Bookmark Resources
+* Rate Resources (1–5 Stars)
+* View Personal Uploads
+* Edit Uploaded Resources
+* Delete Uploaded Resources
+* User Dashboard
+* User Profile
+
+### Admin Features
+
+* Admin Dashboard
+* Approve Uploaded Resources
+* Reject Uploaded Resources
+* Manage Users
+* Delete Users
+
+### Analytics
+
+* Top Downloaded Resources
+* Top Rated Resources
+* Download Count Tracking
+* Average Rating Calculation
+
+---
+
+## Tech Stack
+
+### Frontend
+
+* React.js
+* Vite
+* React Router DOM
+* Axios
+* CSS
+
+### Backend
+
+* Spring Boot
+* Spring Security
+* JWT Authentication
+* Spring Data JPA
+* Hibernate
+
+### Database
+
+* PostgreSQL
+
+### Tools
+
+* Postman
+* Git & GitHub
+* IntelliJ IDEA / STS
+* VS Code
+
+---
+
+## Project Structure
+
+### Frontend
+
+```bash
+frontend/
+│
+├── src/
+│   ├── components/
+│   ├── pages/
+│   ├── api/
+│   ├── utils/
+│   └── App.jsx
+│
+├── package.json
+└── vite.config.js
+```
+
+### Backend
+
+```bash
+backend/
+│
+├── controller/
+├── service/
+├── repository/
+├── entity/
+├── dto/
+├── security/
+└── ResourceSharingApplication.java
+```
+
+---
+
+## Installation
+
+### Clone Repository
+
+```bash
+git clone https://github.com/DishaAgarwalla/college-resource-sharing-platform.git
+```
+
+---
+
+## Backend Setup
+
+1. Open backend project in STS/IntelliJ.
+2. Configure PostgreSQL database in:
+
+```properties
+application.properties
+```
+
+Example:
+
+```properties
+spring.datasource.url=jdbc:postgresql://localhost:5432/resource_db
+spring.datasource.username=postgres
+spring.datasource.password=your_password
+```
+
+3. Run the Spring Boot application.
+
+Backend runs on:
+
+```bash
+http://localhost:8080
+```
+
+---
+
+## Frontend Setup
+
+Navigate to frontend folder:
+
+```bash
+cd frontend
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start development server:
+
+```bash
+npm run dev
+```
+
+Frontend runs on:
+
+```bash
+http://localhost:5173
+```
+
+---
+
+## API Endpoints
+
+### Authentication
+
+| Method | Endpoint       |
+| ------ | -------------- |
+| POST   | /auth/register |
+| POST   | /auth/login    |
+
+### Resources
+
+| Method | Endpoint                |
+| ------ | ----------------------- |
+| GET    | /resources              |
+| POST   | /resources/upload       |
+| PUT    | /resources/approve/{id} |
+| PUT    | /resources/reject/{id}  |
+| DELETE | /resources/{id}         |
+
+### Bookmarks
+
+| Method | Endpoint             |
+| ------ | -------------------- |
+| POST   | /bookmarks           |
+| GET    | /bookmarks/user/{id} |
+
+### Ratings
+
+| Method | Endpoint               |
+| ------ | ---------------------- |
+| POST   | /ratings               |
+| GET    | /ratings/resource/{id} |
+
+---
+
+## Future Enhancements
+
+* Forgot Password
+* Email Verification
+* Dark Mode
+* Notifications
+* Profile Picture Upload
+* Responsive UI Improvements
+
+---
+
+## Screenshots
+
+*Add screenshots of your application here.*
+
+---
+
+## Author
+
+**Disha Agarwalla**
+
+GitHub: https://github.com/DishaAgarwalla
+
+---
+
+## License
+
+This project is developed for educational purposes.
