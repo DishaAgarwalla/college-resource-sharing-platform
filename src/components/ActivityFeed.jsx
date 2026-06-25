@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { getTimeAgo } from '../utils/helpers';
-import './ActivityFeed.css';
+import './ActivityFeed.css'; 
 
 const ActivityFeed = ({ activities }) => {
   const [visibleActivities, setVisibleActivities] = useState([]);
