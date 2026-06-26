@@ -1,4 +1,4 @@
-import { createContext, useContext } from 'react'; 
+import { createContext, useContext } from 'react';  
 import useUserPreferences from '../hooks/useUserPreferences';
 
 const PreferencesContext = createContext();
