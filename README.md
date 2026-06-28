@@ -1,4 +1,4 @@
-# College Resource Sharing Platform   
+# College Resource Sharing Platform    
  
 A full-stack web application that enables students and faculty to upload, share, manage, and access academic resources efficiently within a college environment.
 
