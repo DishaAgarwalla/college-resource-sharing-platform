@@ -4,7 +4,7 @@ A full-stack web application that enables students and faculty to upload, share,
 
 ---
 
-## Features
+## Features 
 
 ### Authentication & Authorization
 
